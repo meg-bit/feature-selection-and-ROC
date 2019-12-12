@@ -6,7 +6,7 @@ There are a number of ways to determine mutation loads, each having its own pros
 
 In this project, we aim to replicate the key steps in Lyu et al.’s paper (2018) and to construct a mutation load estimation model specifically for lung adenocarcinoma (AC). We used a relatively small number of genes to estimate the mutation loads of lung AC patients and predict their responses to cancer immunotherapy. 
 
-## Method:
+## Methods
 First, we downloaded the lung AC somatic mutation data from TCGA database (n=230) and constructed a mutation matrix as the training data by selecting only the nonsynonymous point mutations (nonsense, nonstop and missense mutations). Then, we selected candidate genes based on the following criteria: mutation frequency ≥ 10%, coding DNA sequence (CDS) length ≤ 15,000, and demonstrating a significant difference in mutation loads between mutated and wild-type patients for a certain gene (Bonferroni corrected p-value < 0.05 in Wilcoxon test). 
 
 The next step was to construct the mutation load estimation model. Specifically, a linear mathematical model was employed. Recursive feature elimination and Bayesian information criterion were used to identify the parameters and genes that would confer the optimal model. 
